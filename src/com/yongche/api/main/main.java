@@ -22,7 +22,7 @@ public class main
 {
 	public static final String filepath = "FILE PATH";
 	public static final int para_num = 0;
-	public static final String url = "http://sandbox.settlement.yongche.org/V1/Driveraccount/computeDistribute";
+	public static final String url = "";
 	
 	public static void main(String[]agrs)
 	{
@@ -31,6 +31,7 @@ public class main
 				List<Object> params = new ArrayList<Object>();
 				if(para_num != 0)
 				{
+					
 				}else
 				{
 					Object s_p = new settlement_parameter();
