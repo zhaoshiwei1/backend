@@ -13,8 +13,6 @@ import java.util.Map;
 
 import org.json.JSONObject;
 
-import com.yongche.api.util.excel_util;
-import com.yongche.api.http.http_client;
 import com.yongche.api.http.http_client_new;
 import com.yongche.api.parameter.settlement.settlement_parameter;
 import com.yongche.api.util.jsons_util;
@@ -33,14 +31,14 @@ public class main
 				List<Object> params = new ArrayList<Object>();
 				if(para_num != 0)
 				{
-					//params = com.yongche.api.util.excel_util.get_parameter_list(filepath,para_num);
 				}else
 				{
 					Object s_p = new settlement_parameter();
 					params.add(s_p);
 				}
-				for(int i = 0; i<1000; i++)
+				for(int i = 0; i<1; i++)
 				{
+					System.out.print("µÚ" + i + "´Î£º ");
 					a.client(params, url);
 				}
 		} catch (Exception e) {
