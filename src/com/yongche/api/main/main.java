@@ -39,7 +39,10 @@ public class main
 					Object s_p = new settlement_parameter();
 					params.add(s_p);
 				}
-				a.client(params, url);
+				for(int i = 0; i<1000; i++)
+				{
+					a.client(params, url);
+				}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
