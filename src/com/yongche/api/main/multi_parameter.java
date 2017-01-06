@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import com.yongche.api.http.http_client_new;
+import com.yongche.api.http.http_client_sync;
 import com.yongche.api.parameter.parameter;
 import com.yongche.api.parameter.settlement.settlement_parameter;
 import com.yongche.api.util.get_parameter_util;
@@ -38,7 +38,7 @@ public class multi_parameter
 			e.printStackTrace();
 		}
 		
-		http_client_new a=new http_client_new();
+		http_client_sync a=new http_client_sync();
 		
 		try {
 			a.client(params, url);
