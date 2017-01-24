@@ -18,7 +18,7 @@ import com.yongche.api.util.object_util;
 
 public class http_client_async 
 {
-	public void client(List<Object> params, String url, final int i) throws Exception
+	public void client(List<Object> params, String url) throws Exception
 	{
 		
 		for(Object pa:params){
@@ -52,15 +52,13 @@ public class http_client_async
 					out.flush();
 					out.close();
 					
-					System.out.print("Fire times: " + i + "\n");
-					
 					ExecutorService cachedThreadPool = Executors.newCachedThreadPool();  
 	                cachedThreadPool.execute(new Runnable() {  
 	                       
 	                    public void run() {  
 	                          
 	                        // do task  
-	                        get_response(hutc, i);  
+	                        get_response(hutc);  
 	                    }  
 	                });  
 	                cachedThreadPool.shutdown();  
@@ -75,7 +73,7 @@ public class http_client_async
 	}
 
 	
-	public void get_response(HttpURLConnection hutc, int i)
+	public void get_response(HttpURLConnection hutc)
 	{
 		try {
 			StringBuffer buffer=new StringBuffer();
@@ -87,7 +85,6 @@ public class http_client_async
 			{
 		           buffer.append(sg);
 		    }
-			System.out.print("RESPONSE TIMES: " + i);
 		    System.out.println(buffer+ "\n");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
