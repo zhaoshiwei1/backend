@@ -70,20 +70,10 @@ public class main
 				{
 					Object s_p = new settlement_parameter();
 					params.add(s_p);
-					Long time1 = System.currentTimeMillis();
-					System.out.print("**********************************\n");
-					System.out.print("*" + time1+"\n");
-					System.out.print("**********************************\n");
 					for(int i = 0; i<1; i++)
 					{
 						a.client(params, url);
 					}
-					Long time2 = System.currentTimeMillis(); 
-					System.out.print("**********************************\n");
-					System.out.print("*" + time2+"\n");
-					System.out.print("**********************************\n");
-					System.out.print("*" + (time2 - time1)+"\n");
-					System.out.print("**********************************\n");
 				}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
