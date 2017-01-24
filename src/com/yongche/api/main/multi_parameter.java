@@ -14,20 +14,24 @@ import com.yongche.api.util.set_parameter_util;
 
 public class multi_parameter 
 {
-	public static final String filepath = "";
-	public static final int p_num = 1;
+	public static final String filepath = "F:\\settlement.xls";
+	public static final int p_num = 2;
 	public static final String url = "";
 	
 	public static void main(String[] args)
 	{
 		List<Object> params = new ArrayList<Object>();
 		try {
-			List<Map> list = get_parameter_util.get_parameter_list(filepath, p_num);
-			for(Map m : list)
+			List<List<Map<String,String>>> list = get_parameter_util.get_parameter_list(filepath, p_num);
+			for(List m : list)
 			{
-				Object s_p = new settlement_parameter();
-				Object s_p_fixed = set_parameter_util.set_parameter(m, (settlement_parameter) s_p);//这里的类型投射可能是个坑
-				params.add(s_p_fixed);
+				for(int i = 0; i<m.size(); i ++)
+				{
+					Object s_p = new settlement_parameter();
+					Object s_p_fixed = set_parameter_util.set_parameter((Map<String, String>) m.get(i), (settlement_parameter) s_p);//这里的类型投射可能是个坑
+					params.add(s_p_fixed);
+				}
+				
 			}
 			
 		} catch (FileNotFoundException e) {

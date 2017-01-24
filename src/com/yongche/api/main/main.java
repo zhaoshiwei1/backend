@@ -23,11 +23,11 @@ public class main
 {
 	public static final String filepath = "FILE PATH";
 	public static final int para_num = 0;
-	public static final String url = "http://sandbox.settlement.yongche.org/V1/Driveraccount/computeDistribute";
+	public static final String url = "";
 	
 	public static void main(String[]agrs)
 	{
-		http_client_async a=new http_client_async();
+		http_client_sync a=new http_client_sync();
 		try {
 				List<Object> params = new ArrayList<Object>();
 				if(para_num != 0)
@@ -37,10 +37,20 @@ public class main
 				{
 					Object s_p = new settlement_parameter();
 					params.add(s_p);
+					Long time1 = System.currentTimeMillis();
+					System.out.print("**********************************\n");
+					System.out.print("*" + time1+"\n");
+					System.out.print("**********************************\n");
 					for(int i = 0; i<100; i++)
 					{
-						a.client(params, url, i);
+						a.client(params, url);
 					}
+					Long time2 = System.currentTimeMillis(); 
+					System.out.print("**********************************\n");
+					System.out.print("*" + time2+"\n");
+					System.out.print("**********************************\n");
+					System.out.print("*" + (time2 - time1)+"\n");
+					System.out.print("**********************************\n");
 				}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
