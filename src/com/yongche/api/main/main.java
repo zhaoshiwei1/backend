@@ -17,21 +17,22 @@ import org.json.JSONObject;
 
 import com.yongche.api.http.http_client_async;
 import com.yongche.api.http.http_client_sync;
-import com.yongche.api.parameter.settlement.settlement_parameter;
+import com.yongche.api.parameter.settlement.computeDistribute_parameter;
 import com.yongche.api.util.get_parameter_util;
 import com.yongche.api.util.jsons_util;
 import com.yongche.api.util.object_util;
 import com.yongche.api.util.set_parameter_util;
+import com.yongche.api.util.GlobalDefine;
 
 public class main 
 {
-	public static final String filepath = "FILE PATH";
-	public static final int para_num = 2;
-	public static final String url = "";
+	public static final String filepath = GlobalDefine.FILE_PATH;
+	public static final int para_num = GlobalDefine.PARA_NUM;
+	public static final String url = GlobalDefine.URL;
 	
 	public static void main(String[]agrs)
 	{
-		http_client_async a=new http_client_async();
+		http_client_sync a=new http_client_sync();
 		try {
 				List<Object> params = new ArrayList<Object>();
 				if(para_num > 0)
@@ -42,8 +43,8 @@ public class main
 						{
 							for(int i = 0; i<m.size(); i ++)
 							{
-								Object s_p = new settlement_parameter();
-								Object s_p_fixed = set_parameter_util.set_parameter((Map<String, String>) m.get(i), (settlement_parameter) s_p);//这里的类型投射可能是个坑
+								Object s_p = new computeDistribute_parameter();
+								Object s_p_fixed = set_parameter_util.set_parameter((Map<String, String>) m.get(i), (computeDistribute_parameter) s_p);//这里的类型投射可能是个坑
 								params.add(s_p_fixed);
 							}
 							
@@ -60,7 +61,7 @@ public class main
 					try {
 						for(int i = 0; i<1; i++)
 						{
-							a.client(params, url);
+							a.client(params, url, para_num, filepath);
 						}
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
@@ -68,11 +69,11 @@ public class main
 					}
 				}else
 				{
-					Object s_p = new settlement_parameter();
+					Object s_p = new computeDistribute_parameter();
 					params.add(s_p);
 					for(int i = 0; i<1; i++)
 					{
-						a.client(params, url);
+						a.client(params, url, para_num, filepath);
 					}
 				}
 		} catch (Exception e) {

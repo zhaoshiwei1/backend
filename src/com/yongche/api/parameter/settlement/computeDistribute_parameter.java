@@ -2,7 +2,7 @@ package com.yongche.api.parameter.settlement;
 
 import com.yongche.api.parameter.parameter;
 
-public class settlement_parameter extends parameter
+public class computeDistribute_parameter extends parameter
 {
 	public String driver_id = "50061750";
 	public String amount = "100";
@@ -20,9 +20,15 @@ public class settlement_parameter extends parameter
 	public String order_id = "";
 	public String distribute_status = "";
 	
-	public settlement_parameter()
+	public computeDistribute_parameter()
 	{
 		
+	}
+	
+	@Override
+	public String get_url()
+	{
+		return null;
 	}
 	
 	@Override

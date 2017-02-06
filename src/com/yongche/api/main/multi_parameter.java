@@ -8,7 +8,7 @@ import java.util.Map;
 
 import com.yongche.api.http.http_client_sync;
 import com.yongche.api.parameter.parameter;
-import com.yongche.api.parameter.settlement.settlement_parameter;
+import com.yongche.api.parameter.settlement.computeDistribute_parameter;
 import com.yongche.api.util.get_parameter_util;
 import com.yongche.api.util.set_parameter_util;
 
@@ -27,8 +27,8 @@ public class multi_parameter
 			{
 				for(int i = 0; i<m.size(); i ++)
 				{
-					Object s_p = new settlement_parameter();
-					Object s_p_fixed = set_parameter_util.set_parameter((Map<String, String>) m.get(i), (settlement_parameter) s_p);//这里的类型投射可能是个坑
+					Object s_p = new computeDistribute_parameter();
+					Object s_p_fixed = set_parameter_util.set_parameter((Map<String, String>) m.get(i), (computeDistribute_parameter) s_p);//这里的类型投射可能是个坑
 					params.add(s_p_fixed);
 				}
 				
@@ -45,7 +45,7 @@ public class multi_parameter
 		http_client_sync a=new http_client_sync();
 		
 		try {
-			a.client(params, url);
+			a.client(params, url, p_num, filepath);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -6,4 +6,9 @@ public class parameter
 	{
 		
 	}
+
+	public String get_url()
+	{
+		return null;
+	}
 }

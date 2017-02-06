@@ -12,13 +12,16 @@ import java.util.Map;
 
 import com.yongche.api.util.jsons_util;
 import com.yongche.api.util.object_util;
+import com.yongche.api.util.set_testresult_util;
 
 public class http_client_sync 
 {
-	public void client(List<Object> params, String url) throws Exception
+	public void client(List<Object> params, String url, int p_num, String filepath) throws Exception
 	{
-		
-		for(Object pa:params){
+		int i = 1;
+		for(Object pa:params)
+		{
+			
 			try {
 					List<Map> pa_list = object_util.getFieldsValue(pa);
 					//System.out.print(pa_list.toString() + "\n");
@@ -62,7 +65,9 @@ public class http_client_sync
 				    }
 				    System.out.println("接收返回值:" + buffer+ "\n");
 				
-				
+				    String value = buffer.toString();
+				    set_testresult_util.writeCell(filepath, i, p_num, value);
+				    i++;
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
