@@ -15,6 +15,7 @@ import java.util.Map;
 
 import org.json.JSONObject;
 
+import com.yongche.api.globaldefine.GlobalDefine;
 import com.yongche.api.http.http_client_async;
 import com.yongche.api.http.http_client_sync;
 import com.yongche.api.parameter.settlement.computeDistribute_parameter;
@@ -22,7 +23,6 @@ import com.yongche.api.util.get_parameter_util;
 import com.yongche.api.util.jsons_util;
 import com.yongche.api.util.object_util;
 import com.yongche.api.util.set_parameter_util;
-import com.yongche.api.util.GlobalDefine;
 
 public class main 
 {
