@@ -14,7 +14,7 @@ import com.yongche.api.util.set_parameter_util;
 
 public class multi_parameter 
 {
-	public static final String filepath = "F:\\settlement.xls";
+	public static final String filepath = "";
 	public static final int p_num = 2;
 	public static final String url = "";
 	
