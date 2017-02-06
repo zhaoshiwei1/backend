@@ -37,6 +37,7 @@ public class object_util
     			  		infoMap = new HashMap();
     			  		infoMap.put("name", f.getName());
     			  		infoMap.put("value", f.get(obj));
+    			  		log.c(f.getName(),(f.get(obj)).toString());
     			  		list.add(infoMap);
     			   }
 	    	    	 //System.out.println("字段："+f.getName()+" 类型为："+f.getType().getName()+" 值为："+ f.get(obj));

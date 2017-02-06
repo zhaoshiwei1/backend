@@ -14,6 +14,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 import com.yongche.api.util.jsons_util;
+import com.yongche.api.util.log;
 import com.yongche.api.util.object_util;
 
 public class http_client_async 
@@ -85,7 +86,8 @@ public class http_client_async
 			{
 		           buffer.append(sg);
 		    }
-		    System.out.println(buffer+ "\n");
+		    //System.out.println(buffer+ "\n");
+		    log.out("RESPONSE", buffer.toString());
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

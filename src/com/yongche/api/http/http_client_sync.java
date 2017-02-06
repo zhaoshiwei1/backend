@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.yongche.api.util.jsons_util;
+import com.yongche.api.util.log;
 import com.yongche.api.util.object_util;
 import com.yongche.api.util.set_testresult_util;
 
@@ -63,8 +64,8 @@ public class http_client_sync
 					{
 				           buffer.append(sg);
 				    }
-				    System.out.println("接收返回值:" + buffer+ "\n");
-				
+				    //System.out.println("接收返回值:" + buffer+ "\n");
+					log.out("RESPONSE", buffer.toString());
 				    String value = buffer.toString();
 				    set_testresult_util.writeCell(filepath, i, p_num, value);
 				    i++;

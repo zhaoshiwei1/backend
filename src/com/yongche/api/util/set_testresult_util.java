@@ -23,7 +23,7 @@ public class set_testresult_util
 			wb.write(os);
 			os.close();
 		} catch (Exception e) {
-			e.printStackTrace();
+			log.out_exception(e);
 		}
 
 	}

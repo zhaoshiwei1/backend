@@ -1,6 +1,7 @@
 package com.yongche.api.parameter.settlement;
 
 import com.yongche.api.parameter.parameter;
+import com.yongche.api.util.log;
 
 public class computeDistribute_parameter extends parameter
 {
@@ -82,7 +83,7 @@ public class computeDistribute_parameter extends parameter
 				this.distribute_status = value;
 				break;
 			default:
-				System.out.print("No Parameter: " + name + "! \n");
+				log.out("No Parameter", name);
 		}
 	}
 }

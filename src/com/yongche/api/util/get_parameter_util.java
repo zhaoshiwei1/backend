@@ -33,7 +33,7 @@ public class get_parameter_util
 		
 		List<List<Map<String, String>>> list1 = new ArrayList<List<Map<String, String>>>();
  		
-		for (int j = 1; j<rowNums; j++)
+		for (int j = 1; j<rowNums+1; j++)
 		{
 			HSSFRow r_value = s.getRow(j);//每一行参数值
 			List<Map<String, String>> l = new ArrayList<Map<String, String>>();

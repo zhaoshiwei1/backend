@@ -55,6 +55,14 @@ public class log
 		}
 	}
 	
+	public static void out_exception(Exception e)
+	{
+		if(GlobalDefine.if_Exception)
+		{
+			e.printStackTrace();
+		}
+	}
+	
 	
 	public static String tag_format(String tag)
 	{
