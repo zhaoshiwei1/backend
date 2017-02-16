@@ -3,6 +3,9 @@ package com.yongche.api.parameter.settlement;
 import com.yongche.api.parameter.parameter;
 import com.yongche.api.util.log;
 
+//****************************
+//*          订单分佣参数                             *
+//****************************
 public class computeDistribute_parameter extends parameter
 {
 	public String driver_id = "50061750";
