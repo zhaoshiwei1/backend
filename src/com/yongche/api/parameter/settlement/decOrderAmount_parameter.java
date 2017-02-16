@@ -3,7 +3,7 @@ package com.yongche.api.parameter.settlement;
 import com.yongche.api.parameter.parameter;
 import com.yongche.api.util.log;
 
-
+//接口名称 :处罚(五方分佣)-减少订单金额
 
 public class decOrderAmount_parameter extends parameter 
 {

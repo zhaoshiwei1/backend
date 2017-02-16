@@ -3,7 +3,7 @@ package com.yongche.api.parameter.settlement;
 import com.yongche.api.parameter.parameter;
 import com.yongche.api.util.log;
 
-//接口名称 :订单奖励(两分分佣)
+//接口名称 :订单处罚(两分分佣)
 
 public class decRewardAmount_parameter extends parameter
 {
