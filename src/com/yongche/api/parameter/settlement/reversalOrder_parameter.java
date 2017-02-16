@@ -3,6 +3,10 @@ package com.yongche.api.parameter.settlement;
 import com.yongche.api.parameter.parameter;
 import com.yongche.api.util.log;
 
+//****************************
+//*          冲正反转参数                             *
+//****************************
+
 public class reversalOrder_parameter extends parameter
 {
 	public String driver_id = "";

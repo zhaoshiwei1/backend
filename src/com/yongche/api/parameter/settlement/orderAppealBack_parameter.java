@@ -2,24 +2,23 @@ package com.yongche.api.parameter.settlement;
 
 import com.yongche.api.parameter.parameter;
 import com.yongche.api.util.log;
-
 //****************************
-//*          处理分账参数                             *
+//*          申诉补回                                      *
 //****************************
-
-public class procDistribute_parameter extends parameter
+public class orderAppealBack_parameter extends parameter
 {
 	public String driver_id = "";
 	public String service_order_id = "";
 	public String source = "";
 	public String rewards_type = "";
+	public String driver_settlement_id = "";
 	public String extra = "";
 	public String operator_id = "";
 	public String order_id = "";
 	
-	public procDistribute_parameter()
+	public orderAppealBack_parameter()
 	{
-		
+
 	}
 	
 	@Override
@@ -44,6 +43,9 @@ public class procDistribute_parameter extends parameter
 				break;
 			case "rewards_type":
 				this.rewards_type = value;
+				break;
+			case "driver_settlement_id":
+				this.driver_settlement_id = value;
 				break;
 			case "extra":
 				this.extra = value;

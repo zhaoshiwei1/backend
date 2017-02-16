@@ -4,10 +4,10 @@ import com.yongche.api.parameter.parameter;
 import com.yongche.api.util.log;
 
 //****************************
-//*          处理分账参数                             *
+//*          风控不结算                                  *
 //****************************
 
-public class procDistribute_parameter extends parameter
+public class orderWithoutSettlement_parameter extends parameter 
 {
 	public String driver_id = "";
 	public String service_order_id = "";
@@ -17,7 +17,7 @@ public class procDistribute_parameter extends parameter
 	public String operator_id = "";
 	public String order_id = "";
 	
-	public procDistribute_parameter()
+	public orderWithoutSettlement_parameter()
 	{
 		
 	}
