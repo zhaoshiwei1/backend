@@ -3,22 +3,22 @@ package com.yongche.api.parameter.settlement;
 import com.yongche.api.parameter.parameter;
 import com.yongche.api.util.log;
 
-//接口名称 :风控订单申诉补回
+//接口名称 :订单奖励(两分分佣)
 
-public class orderAppealBack_parameter extends parameter
+public class decRewardAmount_parameter extends parameter
 {
 	public String driver_id = "";
+	public String amount = "";
 	public String service_order_id = "";
 	public String source = "";
 	public String rewards_type = "";
-	public String driver_settlement_id = "";
 	public String extra = "";
 	public String operator_id = "";
 	public String order_id = "";
-	
-	public orderAppealBack_parameter()
-	{
 
+	public decRewardAmount_parameter()
+	{
+		
 	}
 	
 	@Override
@@ -29,11 +29,14 @@ public class orderAppealBack_parameter extends parameter
 	
 	@Override
 	public void set_parameter(String name, String value)
-	{	
+	{
 		switch (name)
 		{
 			case "driver_id":
 				this.driver_id = value;
+				break;
+			case "amount":
+				this.amount = value;
 				break;
 			case "service_order_id":
 				this.service_order_id = value;
@@ -43,9 +46,6 @@ public class orderAppealBack_parameter extends parameter
 				break;
 			case "rewards_type":
 				this.rewards_type = value;
-				break;
-			case "driver_settlement_id":
-				this.driver_settlement_id = value;
 				break;
 			case "extra":
 				this.extra = value;

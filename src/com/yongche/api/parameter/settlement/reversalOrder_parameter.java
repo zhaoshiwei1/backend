@@ -3,9 +3,7 @@ package com.yongche.api.parameter.settlement;
 import com.yongche.api.parameter.parameter;
 import com.yongche.api.util.log;
 
-//****************************
-//*          冲正反转参数                             *
-//****************************
+//接口名称 :订单冲正/反转(五方分佣)
 
 public class reversalOrder_parameter extends parameter
 {

@@ -3,9 +3,7 @@ package com.yongche.api.parameter.settlement;
 import com.yongche.api.parameter.parameter;
 import com.yongche.api.util.log;
 
-//****************************
-//*          处理分账参数                             *
-//****************************
+//接口名称 :处理分账
 
 public class procDistribute_parameter extends parameter
 {

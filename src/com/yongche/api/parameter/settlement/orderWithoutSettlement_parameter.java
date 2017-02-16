@@ -3,9 +3,7 @@ package com.yongche.api.parameter.settlement;
 import com.yongche.api.parameter.parameter;
 import com.yongche.api.util.log;
 
-//****************************
-//*          风控不结算                                  *
-//****************************
+//接口名称 :风控订单不予结算
 
 public class orderWithoutSettlement_parameter extends parameter 
 {

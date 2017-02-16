@@ -3,9 +3,7 @@ package com.yongche.api.parameter.settlement;
 import com.yongche.api.parameter.parameter;
 import com.yongche.api.util.log;
 
-//****************************
-//*      分佣结算快照查询                                  *
-//****************************
+//接口名称 :分佣结算快照查询
 
 public class getCommissionLog_parameter extends parameter
 {
