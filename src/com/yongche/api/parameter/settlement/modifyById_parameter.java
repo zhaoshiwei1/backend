@@ -3,16 +3,15 @@ package com.yongche.api.parameter.settlement;
 import com.yongche.api.parameter.parameter;
 import com.yongche.api.util.log;
 
-//接口名称 :分佣结算快照查询
+//接口名称 :根据主键更新单条城市配置数据
 
-//请求方式GET, 当前施工未完成
-
-public class getCommissionLog_parameter extends parameter
+public class modifyById_parameter extends parameter
 {
-	public String driver_id = "";
-	public String service_order_id = "";
+	public String id = "";
+	public String yidao_ratio = "";
+	public String operator_id = "";
 	
-	public getCommissionLog_parameter()
+	public modifyById_parameter()
 	{
 		
 	}
@@ -27,15 +26,19 @@ public class getCommissionLog_parameter extends parameter
 	public void set_parameter(String name, String value)
 	{
 		switch (name)
-		{	
-			case "driver_id":
-				this.driver_id = value;
+		{
+			case "id":
+				this.id = value;
 				break;
-			case "service_order_id":
-				this.service_order_id = value;
+			case "yidao_ratio": 
+				this.yidao_ratio = value;
+				break;
+			case "operator_id":
+				this.operator_id = value;
 				break;
 			default:
 				log.out("参数体实例中未能发现对应的参数名", name);
 		}
 	}
+	
 }

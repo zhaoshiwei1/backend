@@ -85,7 +85,7 @@ public class computeDistribute_parameter extends parameter
 				this.distribute_status = value;
 				break;
 			default:
-				log.out("No Parameter", name);
+				log.out("参数体实例中未能发现对应的参数名", name);
 		}
 	}
 }
