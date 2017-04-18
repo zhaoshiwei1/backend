@@ -18,7 +18,7 @@ import org.json.JSONObject;
 import com.yongche.api.globaldefine.GlobalDefine;
 import com.yongche.api.http.http_client_async;
 import com.yongche.api.http.http_client_sync;
-import com.yongche.api.parameter.settlement.computeDistribute_parameter;
+import com.yongche.api.parameter.settlement.*;
 import com.yongche.api.util.get_parameter_util;
 import com.yongche.api.util.jsons_util;
 import com.yongche.api.util.log;
@@ -44,11 +44,11 @@ public class main
 						for(List m : list)
 						{
 							log.a("参数列表字符串集合成员个数", String.valueOf(list.size()));
-							Object s_p = new computeDistribute_parameter();
+							Object s_p = new orderAppealBack_parameter();
 							for(int i = 0; i<m.size(); i ++)
 							{
 								log.a("单一参数列表成员个数", String.valueOf(m.size()));
-								s_p = set_parameter_util.set_parameter((Map<String, String>) m.get(i), (computeDistribute_parameter) s_p);//这里的类型投射可能是个坑
+								s_p = set_parameter_util.set_parameter((Map<String, String>) m.get(i), (orderAppealBack_parameter) s_p);//这里的类型投射可能是个坑
 								//参数列表实体一共有30个， 问题就出现在这里， 一共向列表中添加了30条记录
 							}
 							params.add(s_p);

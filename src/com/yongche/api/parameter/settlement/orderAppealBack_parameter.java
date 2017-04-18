@@ -9,11 +9,11 @@ public class orderAppealBack_parameter extends parameter
 {
 	public String driver_id = "";
 	public String service_order_id = "";
-	public String source = "";
-	public String rewards_type = "";
+	public String source = "10";
+	public String rewards_type = "100";
 	public String driver_settlement_id = "";
-	public String extra = "";
-	public String operator_id = "";
+	public String extra = "called by java";
+	public String operator_id = "12345678";
 	public String order_id = "";
 	
 	public orderAppealBack_parameter()

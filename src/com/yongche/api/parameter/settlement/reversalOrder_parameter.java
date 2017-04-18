@@ -9,10 +9,10 @@ public class reversalOrder_parameter extends parameter
 {
 	public String driver_id = "";
 	public String service_order_id = "";
-	public String source = "";
-	public String rewards_type = "";
-	public String extra = "";
-	public String operator_id = "";
+	public String source = "10";
+	public String rewards_type = "100";
+	public String extra = "call from java";
+	public String operator_id = "12345678";
 	public String order_id = "";
 	public String distribute_status = "";
 	public String distribute_driver_amount = "";

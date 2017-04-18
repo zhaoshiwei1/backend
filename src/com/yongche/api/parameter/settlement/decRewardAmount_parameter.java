@@ -10,10 +10,10 @@ public class decRewardAmount_parameter extends parameter
 	public String driver_id = "";
 	public String amount = "";
 	public String service_order_id = "";
-	public String source = "";
-	public String rewards_type = "";
-	public String extra = "";
-	public String operator_id = "";
+	public String source = "10";
+	public String rewards_type = "100";
+	public String extra = "12345678";
+	public String operator_id = "22345678";
 	public String order_id = "";
 
 	public decRewardAmount_parameter()

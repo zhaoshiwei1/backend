@@ -9,12 +9,12 @@ public class incAccountAdjustAmount_parameter extends parameter
 {
 	public String driver_id = "";
 	public String amount = "";
-	public String source = "";
-	public String rewards_type = "";
-	public String extra = "";
-	public String operator_id = "";
+	public String source = "10";
+	public String rewards_type = "100";
+	public String extra = "12345678";
+	public String operator_id = "22345678";
 	public String order_id = "";
-	public String realtime_income = "";//实时入账“true”, 否则不填
+	public String realtime_income = "true";//实时入账“true”, 否则不填
 	
 	public incAccountAdjustAmount_parameter()
 	{

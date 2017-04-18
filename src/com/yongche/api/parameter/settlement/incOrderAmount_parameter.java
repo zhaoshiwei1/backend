@@ -7,13 +7,13 @@ import com.yongche.api.util.log;
 
 public class incOrderAmount_parameter extends parameter
 {
-	public String driver_id = "";
-	public String amount = "";
-	public String service_order_id = "";
-	public String source = "";
-	public String rewards_type = "";
-	public String extra = "";
-	public String operator_id = "";
+	public String driver_id = "121";
+	public String amount = "12121";
+	public String service_order_id = "1111";
+	public String source = "10";
+	public String rewards_type = "100";
+	public String extra = "test_flag";
+	public String operator_id = "22345678";
 	public String order_id = "";
 
 	public incOrderAmount_parameter()
